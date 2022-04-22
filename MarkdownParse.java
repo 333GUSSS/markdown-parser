@@ -12,27 +12,27 @@ public class MarkdownParse {
 
         ArrayList<String> empty_link = new ArrayList<>();
 
-        // find the next [, then find the ], then find the (, then read link upto next )
+        //find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         
         if (markdown.length() == 0) {
             System.out.print("There are no links in the file.Thus, you will recieve an empty pair of brackets");
         }
 
-        //System.out.println("file total length = " + markdown.length());
+        System.out.println("file total length = " + markdown.length());
         
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
-            //System.out.println("26: currentIndex = " + currentIndex + "\n" + "26: openBracket = " + openBracket);
+            System.out.println("26: currentIndex = " + currentIndex + "\n" + "26: openBracket = " + openBracket);
 
             int closeBracket = markdown.indexOf("]", openBracket);
-            //System.out.println("29: closeBracket = " + closeBracket);
+            System.out.println("29: closeBracket = " + closeBracket);
 
             int openParen = markdown.indexOf("(", closeBracket);
-            //System.out.println("32: openParen = " + openParen);
+            System.out.println("32: openParen = " + openParen);
 
             int closeParen = markdown.indexOf(")", openParen);
-           // System.out.println("35: closeParen = " + closeParen);
+            System.out.println("35: closeParen = " + closeParen);
 
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
