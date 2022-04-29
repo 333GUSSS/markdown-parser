@@ -1,5 +1,5 @@
 import static org.junit.Assert.*;
-import static org.junit.*;
+import org.junit.*;
 
 public class actionTest {
     @Test
