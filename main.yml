@@ -1,0 +1,23 @@
+name: autoTest
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+    jobs:
+
+      build:
+        runs-on: ubuntu-latest
+
+        steps:
+          - uses: actions/chechout@v2
+
+          - name: Run action Test
+            run: 
+              javac -cp .:lib/* actionTest.java
+
+              java  -cp .:lib/*  org.junit.runner.JUnitCore actionTest
+
+
