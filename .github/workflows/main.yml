@@ -17,6 +17,6 @@ jobs:
 
       - name: Run action Test
         run: |
-          javac -cp .:lib/* actionTest.java
+          javac -cp .:lib/* MarkdownParseTest.java
 
-          java  -cp .:lib/*  org.junit.runner.JUnitCore actionTest
+          java  -cp .:lib/*  org.junit.runner.JUnitCore MarkdownParseTest
