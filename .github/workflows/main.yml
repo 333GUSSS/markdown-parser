@@ -16,7 +16,5 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run action Test
-        run: |
-          javac -cp .:lib/* MarkdownParseTest.java
-
-          java  -cp .:lib/*  org.junit.runner.JUnitCore MarkdownParseTest
+        run: 
+          make test
